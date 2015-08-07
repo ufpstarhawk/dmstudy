@@ -15,6 +15,7 @@ import android.widget.TextView;
 import com.xiaoteng.dms.activity.SearchActivity;
 import com.xiaoteng.dms.data.SearchHistoryData;
 import com.xiaoteng.dms.R;
+import com.xiaoteng.dms.uitl.Codes;
 
 public class SearchAdapter extends BaseAdapter {
     private Context mContext;
@@ -73,8 +74,8 @@ public class SearchAdapter extends BaseAdapter {
 
     public void initSearchHistory() {
         SharedPreferences sp = mContext.getSharedPreferences(
-                SearchActivity.SEARCH_HISTORY, 0);
-        String longhistory = sp.getString(SearchActivity.SEARCH_HISTORY, "");
+                Codes.SEARCH_HISTORY, 0);
+        String longhistory = sp.getString(Codes.SEARCH_HISTORY, "");
         String[] hisArrays = longhistory.split(",");
         mOriginalValues = new ArrayList<SearchHistoryData>();
         if (hisArrays.length < 1) {
@@ -126,7 +127,7 @@ public class SearchAdapter extends BaseAdapter {
 
     public void clearList() {
         SharedPreferences sp = mContext.getSharedPreferences(
-                SearchActivity.SEARCH_HISTORY, 0);
+                Codes.SEARCH_HISTORY, 0);
         SharedPreferences.Editor editor = sp.edit();
         editor.clear();
         editor.commit();

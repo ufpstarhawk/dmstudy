@@ -1,6 +1,7 @@
 package com.xiaoteng.dms.adapter;
 
 import android.content.Context;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,7 +24,6 @@ import java.util.Map;
 public class NewestLessonAdapter extends BaseAdapter {
     private LayoutInflater mInflater;
     private List<Map<String, Object>> mData;
-    private String url = Codes.URL_ROOT + "/lesson/index.api";
 
     public NewestLessonAdapter(Context context) {
         mInflater = LayoutInflater.from(context);
@@ -31,6 +31,7 @@ public class NewestLessonAdapter extends BaseAdapter {
     }
 
     private void init() {
+        String url = Codes.URL_ROOT + "/lesson/index.api";
         mData=new ArrayList<Map<String, Object>>();
         AsyncHttpClient client = new AsyncHttpClient();
         client.get(url, new JsonHttpResponseHandler() {

@@ -19,7 +19,6 @@ import java.util.Map;
 public class LessonPlaystudyAdapter extends BaseAdapter {
     private LayoutInflater mInflater;
     private List<Map<String, Object>> mData;
-    private String url = Codes.URL_ROOT + "/lesson/index.api";
 
     public LessonPlaystudyAdapter(Context context) {
         mInflater = LayoutInflater.from(context);
@@ -27,6 +26,8 @@ public class LessonPlaystudyAdapter extends BaseAdapter {
     }
 
     private void init() {
+        String url = Codes.URL_ROOT + "/lesson/index.api";
+
         mData=new ArrayList<Map<String, Object>>();
         for (int i = 0; i < 30; i++) {
             Map<String, Object> map = new HashMap<String, Object>();
