@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <RelativeLayout
+            android:id="@+id/title_top_rel"
+            android:layout_width="match_parent"
+            android:layout_height="45dip"
+            android:background="@drawable/top_blank_bg">
+
+        <ImageButton
+                android:id="@+id/btnSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp"
+                android:background="#00000000"
+                android:src="@drawable/search_bg" 
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"/>
+
+        <EditText
+            android:id="@+id/textSearch"
+            android:layout_width="280dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_toLeftOf="@+id/btnSearch"
+            android:background="@drawable/search_input"
+            android:hint="键入搜索..."
+            android:textColor="@drawable/white"
+            android:textColorHint="@drawable/white" >
+
+            <requestFocus />
+        </EditText>
+    </RelativeLayout>
+
+    <LinearLayout android:orientation="vertical"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent">
+        <ListView
+                android:id="@+id/listviewHistory"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true" >
+        </ListView>
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:text="清空搜索记录"
+                android:textColor="@drawable/greyblack"
+                android:background="@drawable/white"
+                android:id="@+id/btnClearHistory"
+                android:layout_gravity="center_horizontal"/>
+    </LinearLayout>
+</LinearLayout>

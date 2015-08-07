@@ -1,0 +1,176 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="end" >
+
+    <include
+        android:id="@+id/top_bg"
+        layout="@layout/top" />
+
+    <LinearLayout
+        android:id="@+id/daohang_linea"
+        android:layout_width="fill_parent"
+        android:layout_height="40dip"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/top_bg"
+        android:background="@drawable/daohang_bg"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/course_but"
+            android:layout_width="wrap_content"
+            android:layout_height="40dip"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:text="全部课程"
+            android:textColor="#808080" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/fengexian_bg" />
+
+        <Button
+            android:id="@+id/seek_teacher_but"
+            android:layout_width="wrap_content"
+            android:layout_height="35dip"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:text="正在学习"
+            android:textColor="#808080" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/fengexian_bg" />
+
+        <Button
+            android:id="@+id/line_study_but"
+            android:layout_width="wrap_content"
+            android:layout_height="35dip"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:text="已学完"
+            android:textColor="#808080" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView1"
+        android:layout_centerHorizontal="true"
+        android:text="手机未注册将自动创建账号"
+        android:textColor="#c9c9c9"
+        android:textSize="15sp" />
+
+    <LinearLayout
+        android:id="@+id/login_passwd"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_below="@+id/textView2"
+        android:layout_margin="20dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/import_bg"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/phone_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:src="@drawable/phone_bg" />
+
+        <ImageView
+            android:id="@+id/login_fenge_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/login_fenge_bg" />
+
+        <EditText
+            android:id="@+id/input_phone_et"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="0.50"
+            android:background="@null"
+            android:hint="请输入手机号......"
+            android:maxLength="11"
+            android:numeric="integer"
+            android:phoneNumber="true"
+            android:selectAllOnFocus="true"
+            android:textSize="14sp" />
+
+        <ImageButton
+            android:id="@+id/delete_bg"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_gravity="center_vertical"
+            android:visibility="gone"
+            android:background="@drawable/delete_bg" />
+        
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="70dip"
+        android:layout_below="@+id/daohang_linea"
+        android:layout_marginTop="20dip"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/touxiang_bg" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/loginsize_text"
+        android:layout_centerHorizontal="true"
+        android:text="请输入手机号登陆"
+        android:textColor="#c9c9c9"
+        android:textSize="15sp" />
+		
+     <TextView
+        android:id="@+id/text_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_below="@+id/login_passwd"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
+        android:gravity="center_vertical|center_horizontal"
+        android:visibility="gone"
+        android:textColor="#0cac69"
+        android:textSize="25sp"
+        android:background="@drawable/input_phone_bg" /> 
+
+    <TextView
+        android:id="@+id/loginsize_text"
+        android:layout_width="wrap_content"
+        android:layout_height="35dip"
+        android:layout_below="@+id/imageView1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dip"
+        android:text="请登录"
+        android:textColor="#585242"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/next_but"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/login_passwd"
+        android:background="@drawable/but_selected"
+        android:text="下一步"
+        android:layout_marginTop="50dip"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
+        android:textColor="@drawable/white"
+        android:textSize="26sp" />
+
+</RelativeLayout>

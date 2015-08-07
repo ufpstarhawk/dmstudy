@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/rl_summary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/lesson_summary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="课程简介"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/lesson_summary_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lesson_summary"
+                android:layout_margin="15dp"
+                android:textColor="#646464" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_summary2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_summary" >
+
+            <TextView
+                android:id="@+id/lector_summary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="讲师简介"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:id="@+id/author_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/lector_summary"
+                android:layout_below="@+id/lector_summary"
+                android:src="@drawable/lecture_imager" />
+
+            <TextView
+                android:id="@+id/text_summary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lector_summary"
+                android:layout_marginRight="5dp"
+                android:layout_toRightOf="@+id/author_image"
+                android:textColor="#646464" />
+        </RelativeLayout>
+
+	<LinearLayout
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentBottom="true"
+	    android:layout_alignParentLeft="true"
+	    android:gravity="bottom"
+	    android:visibility="gone"
+	    android:orientation="vertical" >
+
+	    <include layout="@layout/buy_study_lesson" />
+	</LinearLayout>
+
+</RelativeLayout>

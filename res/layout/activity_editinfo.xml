@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1" >
+
+    <RelativeLayout
+        android:id="@+id/title_top_rel"
+        android:layout_width="match_parent"
+        android:layout_height="45dip"
+        android:background="@drawable/top_blank_bg" >
+
+        <ImageView
+            android:id="@+id/backing_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="30dip"
+            android:layout_centerVertical="true"
+            android:src="@drawable/backing_bg" />
+
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="#00000000"
+            android:text="保存"
+            android:textColor="@drawable/white" />
+    </RelativeLayout>
+
+    <ImageButton
+        android:id="@+id/btnHeadImg"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:adjustViewBounds="false"
+        android:background="#00000000"
+        android:src="@drawable/default_l" />
+
+    <EditText
+        android:id="@+id/textUsername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="15dp"
+        android:text="小明" />
+
+    <TextView
+        android:id="@+id/labelAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:text="登录账号："
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@drawable/greyblack" />
+
+</LinearLayout>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 意见反馈 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1" >
+
+    <RelativeLayout
+        android:id="@+id/title_top_rel"
+        android:layout_width="match_parent"
+        android:layout_height="45dip"
+        android:background="@drawable/top_blank_bg" >
+
+        <ImageView
+            android:id="@+id/backing_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="30dip"
+            android:layout_centerVertical="true"
+            android:src="@drawable/backing_bg" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:fontFamily="幼圆"
+            android:text="意见反馈"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#FFF" />
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/textFeedback"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_margin="10dp"
+        android:layout_weight="0.37"
+        android:gravity="top|left"
+        android:maxLength="240"
+        android:hint="欢迎提出您的意见或遇到的问题，我们会及时帮您解决。" />
+
+    <TextView
+        android:id="@+id/wordsLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginRight="10dp"
+        android:text="还剩个字"
+        android:textColor="@drawable/greyblack" />
+
+    <Button
+        android:id="@+id/btnSubmitFeedback"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="10dp"
+        android:background="@drawable/but_bg1"
+        android:text="提交"
+        android:textColor="@drawable/white" />
+
+</LinearLayout>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include 
+        android:id="@+id/top_bg"
+        layout="@layout/login_top"
+        />
+    <TextView 
+        android:id="@+id/get_phone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        />
+
+   <LinearLayout
+        android:id="@+id/test_lineal"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_below="@+id/top_bg"
+        android:layout_margin="20dp"
+        android:background="@drawable/import_bg"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/test_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:src="@drawable/test_bg" />
+
+        <ImageView
+            android:id="@+id/login_fenge_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/login_fenge_bg" />
+
+        <EditText
+            android:id="@+id/passwd_et"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:hint="请输入登录密码"
+            android:layout_weight="2"
+            android:password="true"
+            android:background="@null"
+            android:inputType="textPassword"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/but_unlearn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:text="忘记密码"
+            android:textColor="#0cac69" />
+
+        <ImageButton
+            android:id="@+id/ps_delete_bg"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:visibility="gone"
+            android:background="@drawable/delete_bg" />
+    </LinearLayout>
+
+	<include
+	    android:id="@+id/login_button"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@+id/test_lineal"
+	    android:layout_margin="20dip"
+	    layout="@layout/login_but" />
+
+</RelativeLayout>

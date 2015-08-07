@@ -1,0 +1,88 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+	<include 
+	    layout="@layout/top"
+	    />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/daohang_bg"
+        android:orientation="horizontal" >
+        <LinearLayout 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <TextView
+                android:id="@+id/tv_course"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:clickable="true"
+                android:layout_weight="1"
+                android:text="全部课程"
+                android:gravity="center"
+                android:textColor="@drawable/text_color"
+                android:background="#00000000" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <TextView
+                android:id="@+id/tv_playstudy"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:clickable="true"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="正在学习"
+                android:textColor="@drawable/text_color"
+                android:background="#00000000" />
+	    </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_endingstudy"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:clickable="true"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="已学完"
+                android:textColor="@drawable/text_color"
+                android:background="#00000000"
+                />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/glissade_iv"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:scaleType="matrix"
+        android:background="@drawable/glissade1" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/homeViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="15dp"
+        android:flipInterval="30"
+        android:persistentDrawingCache="animation" >
+
+    </android.support.v4.view.ViewPager>
+    <TextView 
+        android:id="@+id/userPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        />
+    <TextView 
+        android:id="@+id/push_alias"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        />
+    
+</LinearLayout>

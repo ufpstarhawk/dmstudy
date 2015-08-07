@@ -1,0 +1,167 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+       <SurfaceView
+        android:id="@+id/sv_video"
+        android:layout_width="match_parent"
+        android:layout_height="210dp"
+        />
+
+        <LinearLayout
+            android:id="@+id/linea_player"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_gravity="bottom"
+            android:background="#00000000"
+            android:orientation="horizontal"
+            android:src="@drawable/frame_player" >
+
+                <ImageView
+                    android:id="@+id/bt_play"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:onClick="play"
+                    android:layout_weight="1"
+                    android:src="@drawable/player_but"
+                    android:text="播放" />
+
+                <!-- minHeight最小高和maxHeight最大高限制进度条的高度
+                	自定义进度条的进度背景
+                	thumbOffset去除滑块和进度条的偏移
+                 -->
+            <SeekBar
+                android:id="@+id/progressbar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="8"
+                android:maxHeight="2dp"
+                android:minHeight="5dp"
+                android:layout_gravity="center_vertical"
+                android:progressDrawable="@drawable/progressbar"
+                android:thumb="@drawable/drag_bg"
+                android:thumbOffset="0dip" />
+
+            <ImageView
+                android:id="@+id/bt_spread"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:src="@drawable/spread_but" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linea_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#00000000"
+            android:orientation="horizontal"
+            android:src="@drawable/frame_player" >
+
+            <ImageView
+                android:id="@+id/bt_return"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/backing_video_bg" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:text="JAVA面向对象"
+                android:textColor="@drawable/white"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/daohang_bg"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+
+            <TextView
+                android:id="@+id/tv_course"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="#00000000"
+                android:clickable="true"
+                android:gravity="center"
+                android:text="课程目录"
+                android:textColor="@drawable/text_color" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+
+            <TextView
+                android:id="@+id/tv_playstudy"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="#00000000"
+                android:clickable="true"
+                android:gravity="center"
+                android:text="课程信息"
+                android:textColor="@drawable/text_color" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_endingstudy"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="#00000000"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="课程评价"
+            android:textColor="@drawable/text_color" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/glissade_iv"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:scaleType="matrix"
+        android:src="@drawable/glissade1" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/lesson_fengexian" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:background="@drawable/gainsboro" >
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/homeViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:flipInterval="30"
+        android:persistentDrawingCache="animation" >
+    </android.support.v4.view.ViewPager>
+
+</LinearLayout>
