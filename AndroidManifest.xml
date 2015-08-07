@@ -23,9 +23,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.xiaoteng.dms.activity.WelcomActivity" />
         <activity android:name="com.xiaoteng.dms.activity.InputPasswordActivity" />
-        <activity android:name="com.xiaoteng.dms.activity.LoginActivity" />
         <activity android:name="com.xiaoteng.dms.activity.NewPasswordActivity" />
         <activity android:name="com.xiaoteng.dms.activity.SettingsActivity" />
         <activity android:name="com.xiaoteng.dms.activity.MsgActivity" />
