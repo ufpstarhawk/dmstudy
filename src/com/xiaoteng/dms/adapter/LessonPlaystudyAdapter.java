@@ -1,6 +1,7 @@
 package com.xiaoteng.dms.adapter;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,20 +9,17 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.xiaoteng.dms.R;
+import com.xiaoteng.dms.uitl.Codes;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-/**
- * 课程学习
- * @author zach
- *
- */
 public class LessonPlaystudyAdapter extends BaseAdapter {
     private LayoutInflater mInflater;
     private List<Map<String, Object>> mData;
+    private String url = Codes.URL_ROOT + "/lesson/index.api";
 
     public LessonPlaystudyAdapter(Context context) {
         mInflater = LayoutInflater.from(context);
@@ -35,6 +33,9 @@ public class LessonPlaystudyAdapter extends BaseAdapter {
             map.put("lesson_name", "第" + (i + 1) + "行的标题");
             mData.add(map);
         }
+
+        //SharedPreferences sp = getSharedPreferences(SEARCH_HISTORY, 0);
+        //String longhistory = sp.getString(SEARCH_HISTORY, "");
     }
 
     public void addData(String lesson_name, String hit) {

@@ -18,9 +18,9 @@ import com.xiaoteng.dms.R;
 import com.xiaoteng.dms.activity.fragment.SearchResultFragment;
 import com.xiaoteng.dms.adapter.SearchAdapter;
 import com.xiaoteng.dms.data.SearchHistoryData;
+import com.xiaoteng.dms.uitl.Codes;
 
 public class SearchActivity<SearchHistSoryData> extends Activity implements OnClickListener {
-    public static final String SEARCH_HISTORY = "search_history";
     private ListView listHistory;
     private ImageButton btnSearch;
     private TextView textSearch;
@@ -105,8 +105,8 @@ public class SearchActivity<SearchHistSoryData> extends Activity implements OnCl
         if (text.length() < 1) {
             return;
         }
-        SharedPreferences sp = getSharedPreferences(SEARCH_HISTORY, 0);
-        String longhistory = sp.getString(SEARCH_HISTORY, "");
+        SharedPreferences sp = getSharedPreferences(Codes.SEARCH_HISTORY, 0);
+        String longhistory = sp.getString(Codes.SEARCH_HISTORY, "");
         String[] tmpHistory = longhistory.split(",");
         ArrayList<String> history = new ArrayList<String>(
                 Arrays.asList(tmpHistory));
@@ -125,9 +125,9 @@ public class SearchActivity<SearchHistSoryData> extends Activity implements OnCl
             for (int i = 0; i < history.size(); i++) {
                 sb.append(history.get(i) + ",");
             }
-            sp.edit().putString(SEARCH_HISTORY, sb.toString()).commit();
+            sp.edit().putString(Codes.SEARCH_HISTORY, sb.toString()).commit();
         } else {
-            sp.edit().putString(SEARCH_HISTORY, text + ",").commit();
+            sp.edit().putString(Codes.SEARCH_HISTORY, text + ",").commit();
         }
     }
 }

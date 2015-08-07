@@ -1,7 +1,6 @@
 package com.xiaoteng.dms.adapter;
 
 import android.content.Context;
-import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +9,7 @@ import android.widget.*;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.JsonHttpResponseHandler;
 import com.xiaoteng.dms.R;
+import com.xiaoteng.dms.uitl.Codes;
 import org.apache.http.Header;
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -23,6 +23,7 @@ import java.util.Map;
 public class NewestLessonAdapter extends BaseAdapter {
     private LayoutInflater mInflater;
     private List<Map<String, Object>> mData;
+    private String url = Codes.URL_ROOT + "/lesson/index.api";
 
     public NewestLessonAdapter(Context context) {
         mInflater = LayoutInflater.from(context);
@@ -32,7 +33,6 @@ public class NewestLessonAdapter extends BaseAdapter {
     private void init() {
         mData=new ArrayList<Map<String, Object>>();
         AsyncHttpClient client = new AsyncHttpClient();
-        String url = "http://www.linhoo.com.cn/educate/lesson/index.api";
         client.get(url, new JsonHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, Header[] headers,
