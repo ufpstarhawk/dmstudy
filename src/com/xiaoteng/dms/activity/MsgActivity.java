@@ -17,11 +17,7 @@ import com.xiaoteng.dms.adapter.ListMsgAdapter;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-/**
- * 我的消息
- * @author zach
- *
- */
+
 public class MsgActivity extends Activity implements SwipeRefreshLayout.OnRefreshListener {
     private ListView list;
     private static final int REFRESH_COMPLETE = 0X110;
@@ -70,7 +66,6 @@ public class MsgActivity extends Activity implements SwipeRefreshLayout.OnRefres
 		
 		@Override
 		public void onClick(View v) {
-			// TODO Auto-generated method stub
 			switch (v.getId()) {
 			case R.id.backing_bg:
 				Intent backing = new Intent();

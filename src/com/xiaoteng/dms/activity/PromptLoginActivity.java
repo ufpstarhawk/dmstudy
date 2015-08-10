@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import com.xiaoteng.dms.uitl.Codes;
 import org.apache.http.NameValuePair;
 import org.apache.http.client.utils.URLEncodedUtils;
 import org.apache.http.message.BasicNameValuePair;
@@ -46,7 +47,6 @@ public class PromptLoginActivity extends Activity {
 	
 	
 	public static final String SETTING_INFOS = "SETTING_Infos";
-	public static final String NAME = "NAME"; 
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -76,7 +76,7 @@ public class PromptLoginActivity extends Activity {
 		/*获取一个SharedPreferences对象 */
 		SharedPreferences Username = getSharedPreferences(SETTING_INFOS, Activity.MODE_PRIVATE);
 		//取出保存的NAME
-		String name = Username.getString(NAME, "");
+		String name = Username.getString(Codes.USERNAME, "");
 		input_phone_et.setText(name); //将取出来的用户名赋予input_phone_et
 		
 		/***
@@ -130,7 +130,7 @@ public class PromptLoginActivity extends Activity {
 		//获取一个SharedPreferences对象 
 		SharedPreferences settings = getSharedPreferences("SETTING_INFOS", 0);
 		//保存用户名
-		settings.edit().putString(NAME, input_phone_et.getText().toString()).commit();
+		settings.edit().putString(Codes.USERNAME, input_phone_et.getText().toString()).commit();
 		if(settings.equals("")){
 			Toast.makeText(promptLonginActivity, "账号为空！", Toast.LENGTH_LONG).show();
 			finish();

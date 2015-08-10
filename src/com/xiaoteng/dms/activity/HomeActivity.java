@@ -358,8 +358,7 @@ public class HomeActivity extends Activity {
 			grade.setLayoutParams(layoutParams);
 			grade.setId(i.indexOf(i, 0));
 			grade.setOnClickListener(new gradeFilterListener(grade));
-			org.apmem.tools.layouts.FlowLayout gradeFilter = new org.apmem.tools.layouts.FlowLayout(
-					context);
+			org.apmem.tools.layouts.FlowLayout gradeFilter = new org.apmem.tools.layouts.FlowLayout(context);
 			gradeFilter = (org.apmem.tools.layouts.FlowLayout) view1
 					.findViewById(R.id.gradeFilter);
 			gradeFilter.addView(grade);
@@ -400,8 +399,7 @@ public class HomeActivity extends Activity {
 			subject.setLayoutParams(layoutParams);
 			subject.setId(i.indexOf(i, 0));
 			subject.setOnClickListener(new subjectFilterListener(subject));
-			org.apmem.tools.layouts.FlowLayout subjectFilter = new org.apmem.tools.layouts.FlowLayout(
-					context);
+			org.apmem.tools.layouts.FlowLayout subjectFilter = new org.apmem.tools.layouts.FlowLayout(context);
 			subjectFilter = (org.apmem.tools.layouts.FlowLayout) view1
 					.findViewById(R.id.subjectFilter);
 			subjectFilter.addView(subject);

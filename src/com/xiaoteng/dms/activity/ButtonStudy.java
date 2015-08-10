@@ -13,7 +13,6 @@ public class ButtonStudy extends Activity{
 	private TextView confirm_buy;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.buy_study_lesson);
 		
@@ -21,7 +20,6 @@ public class ButtonStudy extends Activity{
 		confirm_buy.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
 				Intent intent = new Intent();
 				intent.setClass(ButtonStudy.this,PromptLoginActivity.class);
 				startActivity(intent);
