@@ -27,6 +27,7 @@ public class UpdataUserEntity {
 	private static String vip_expire;
 	//用户身份信息
 	private static String token;
+
 	public static int getUserid() {
 		return userid;
 	}
@@ -103,7 +104,6 @@ public class UpdataUserEntity {
 	}
 	public UpdataUserEntity() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 	
 }

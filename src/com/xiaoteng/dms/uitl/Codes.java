@@ -6,7 +6,7 @@ public class Codes {
 
 	//缓存字段名
 	public static final String SEARCH_HISTORY="search_history";//搜索历史
-	public static final String USERNAME="search_history";
+	public static final String USERNAME="USERNAME";//用户名
 
 	//状态编号
 }
